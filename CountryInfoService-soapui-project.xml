@@ -1699,7 +1699,7 @@ if (result== "OK"){
 	log.info("  >>> Test Passed")
 }else {
 	log.info("  >>> Test Failed")
-	}</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a54f2a94-b164-4dc5-8a58-54b183b00300" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase4" searchProperties="true"><con:settings/><con:testStep type="groovy" name="RunTestCase" id="fc7efad8-4cac-4f01-b96f-016ccede1036"><con:settings/><con:config><script>def tCase = testRunner.testCase.testSuite.testCases["TestCase2"]
+	}</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="a54f2a94-b164-4dc5-8a58-54b183b00300" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase4" searchProperties="true" disabled="true"><con:settings/><con:testStep type="groovy" name="RunTestCase" id="fc7efad8-4cac-4f01-b96f-016ccede1036" disabled="true"><con:settings/><con:config><script>def tCase = testRunner.testCase.testSuite.testCases["TestCase2"]
 def prop = new com.eviware.soapui.support.types.StringToObjectMap() 
 runner = tCase.run(prop, false);
 
@@ -1715,13 +1715,13 @@ if (it.name== "TestCase3"){
 }
 
 log.info("  TestCase Name is :  "+testRunner.testCase.Name);
-</script></con:config></con:testStep><con:testStep type="groovy" name="RunTestSuite" id="333e6e0e-66a8-40f8-a3ad-9750afacfc9f"><con:settings/><con:config><script>def suite = context.testCase.testSuite.project.testSuites["TestSuite2"]
+</script></con:config></con:testStep><con:testStep type="groovy" name="RunTestSuite" id="333e6e0e-66a8-40f8-a3ad-9750afacfc9f" disabled="true"><con:settings/><con:config><script>def suite = context.testCase.testSuite.project.testSuites["TestSuite2"]
 suite.run(null,false)
 
 // null can be replaced with : new com.eviware.soapui.support.types.StringToObjectMap()
 log.info ("   ===   "+suite.getName().toString()+" - Executed successfully")
 
-</script></con:config></con:testStep><con:testStep type="groovy" name="RunTestProject" id="defc13c7-b724-462c-955a-6e649de136c1"><con:settings/><con:config><script>def projectName=testRunner.getTestCase().getTestSuite().getProject().getWorkspace().getProjectByName("REST Project 1")
+</script></con:config></con:testStep><con:testStep type="groovy" name="RunTestProject" id="defc13c7-b724-462c-955a-6e649de136c1" disabled="true"><con:settings/><con:config><script>def projectName=testRunner.getTestCase().getTestSuite().getProject().getWorkspace().getProjectByName("REST Project 1")
 def runStatus = projectName.run(null,true)
 //projectName.run(new com.eviware.soapui.support.types.StringToObjectMap(), false)
 Thread.sleep(6000)
