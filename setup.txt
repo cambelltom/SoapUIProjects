@@ -1,0 +1,1 @@
+log.info("This setup script,runs before all TestSuites")
